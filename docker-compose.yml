@@ -4,9 +4,9 @@ services:
     image: maccyber/micro-dockerhub-hook
     # build: .
     environment:
-      - PORT=${PORT}
+      - TOKEN=b98ebdd3-5319-432e-a1e4-a131c62555f3
     ports:
-      - "${PORT}:${PORT}"
+      - "8888:3000"
     volumes:
       - ./scripts:/src/scripts
       - /var/run/docker.sock:/var/run/docker.sock
