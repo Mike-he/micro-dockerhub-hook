@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker stack up --resolve-image=changed -c /root/workspace/myVue/docker/docker-compose.yml cola-vue
+docker stack up --resolve-image=changed -c /src/workspace/myVue/docker/deployment/docker-compose.yml cola-vue

@@ -9,6 +9,7 @@ services:
       - "8888:3000"
     volumes:
       - ./scripts:/src/scripts
+      - /root/workspace:/src/workspace
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - default
