@@ -2,7 +2,6 @@ version: '3'
 services:
   dockerhub:
     image: maccyber/micro-dockerhub-hook
-    # build: .
     environment:
       - TOKEN=b98ebdd3-5319-432e-a1e4-a131c62555f3
     ports:
@@ -11,6 +10,10 @@ services:
       - ./scripts:/src/scripts
       - /root/workspace:/src/workspace
       - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
     networks:
       - default
 networks:
